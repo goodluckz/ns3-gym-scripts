@@ -1,6 +1,6 @@
 #include "ns3/core-module.h"
 #include "ns3/opengym-module.h"
-#include "mygym.h"
+#include "myenv.h"
 
 using namespace ns3;
 
