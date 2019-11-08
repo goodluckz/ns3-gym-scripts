@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+####################################################
+#
+# simple test can run without env
+#
+####################################################
 import gym
 import argparse
 import ns3gym
