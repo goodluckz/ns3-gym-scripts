@@ -12,7 +12,8 @@ def build(bld):
     obj.source = ["gymtest/sim.cc", "gymtest/myenv.cc"]
 
     obj = bld.create_ns3_program(
-        "linear-mesh", ["core", "internet", "application", "wifi", "opengym"]
+        "linear-mesh", ["core", "internet",
+                        "application", "wifi", "opengym", "mobility", "spectrum", "stats", "flow-monitor", "traffic-control"]
     )
     obj.source = ["linear-mesh/sim.cc"]
 
@@ -24,7 +25,9 @@ def build(bld):
     obj = bld.create_ns3_program(
         "interference-pattern", ["core", "internet", "wifi", "opengym"]
     )
-    obj.source = ["interference-pattern/sim.cc", "interference-pattern/mygym.cc"]
+    obj.source = ["interference-pattern/sim.cc",
+                  "interference-pattern/mygym.cc"]
 
-    obj = bld.create_ns3_program("rl-tcp", ["core", "internet", "ptp", "opengym"])
+    obj = bld.create_ns3_program(
+        "rl-tcp", ["core", "internet", "ptp", "opengym"])
     obj.source = ["rl-tcp/sim.cc", "rl-tcp/tcp-rl-env.cc", "rl-tcp/tcp-rl.cc"]
